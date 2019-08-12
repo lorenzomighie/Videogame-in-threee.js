@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Original+Surfer&display=swap');
+
+$reddish : #E74C3C;
+$redder : #C0392B;
+$cloud : #ECF0F1;
+
+
+/*---------------------------- General ------------------------- */
+
+
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    overflow:hidden;
+}
+
+// makes text not selectable
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+// red flat button
+.flat-button {
+    width: 10vmax; height: 4vmax;
+    background: $reddish;
+    margin: 3.5vmax auto 0;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    transition: color 3.6s;
+    /* Typo */
+    line-height: 4vmax;
+    text-align: center;
+    color: #fff;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 2vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flat-button:after {
+    position: absolute;
+    top: 90%; left: 0;
+    width: 100%; height: 100%;
+    background: $redder;
+    content: "";
+    z-index: -2;
+    transition: transform .3s;
+}
+
+.flat-button:hover::after {
+    transform: translateY(-80%);
+    transition: transform .3s;
+}
+
+
+.title {
+    font-family: 'Luckiest Guy', cursive;
+    position: absolute;
+    text-align: justify;
+    vertical-align: center;
+    font-size: 6vw;
+    transform: translate(-50%, -50%);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-filter: drop-shadow(0.5vw 0.5vw 0px black);
+    filter: drop-shadow(0.5vw 0.5vw 0px black);
+}
+
+
+
+/*---------------------------- Loading ------------------------- */
+
+#load{
+    font-family: 'Luckiest Guy', cursive;
+    position: absolute;
+    text-align: justify;
+    vertical-align: center;
+    font-size: 6vw;
+    transform: translate(-50%, -50%);
+    color: white;
+    left:50%;
+    top:20%;
+}
+
+/*----------------------------- Menu --------------------------- */
+
+#menuTitle {
+    top: 10%;
+    left: 50%;
+}
+
+#playButton {
+    top: 80%;
+    left: 50%;
+}
+
+#textMenu{
+    font-size: 2vw;
+    top: 29%;
+    left: 50%;
+    font-family: 'Libre Franklin', sans-serif;
+    position: absolute;
+    text-align: justify;
+    vertical-align: center;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+
+/*----------------------------- Pause --------------------------- */
+
+#pauseTitle {
+    top: 10%;
+    left: 50%;
+}
+
+#returnButton {
+    top: 80%;
+    left: 50%;
+}
+
+
+/*----------------------------- Game --------------------------- */
+
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    vertical-align: center;
+    width: 4vmax;
+    height: 4vmax;
+    transform: translate(-50%, -50%);
+
+}
+
+/*----------------------------- Riddle --------------------------- */
+
+#riddleText {
+    font-family: 'Original Surfer', cursive;
+}
+
+#returnSuggest{
+    font-family: 'Libre Franklin', sans-serif;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    //margin-bottom: 10%;
+    bottom: 5%;
+    left: 50%;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.riddleText {
+    position: absolute;
+    text-align: justify;
+    vertical-align: center;
+    font-size: 2.5vw;
+    transform: translate(-50%, -50%);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-filter: drop-shadow(0.5vw 0.5vw 0px black);
+    filter: drop-shadow(0.5vw 0.5vw 0px black);
+    top: 40%;
+    left: 50%;
+}
+
+/*----------------------------- Tutorial --------------------------- */
+
+.tutorialSentence{
+    font-family: 'Libre Franklin', sans-serif;
+    transform: translate(-50%, -50%);
+    //margin-bottom: 10%;
+    color: white;
+    //vertical-align: center;
+}
+
+#tutorialLine1{
+    font-family: 'Luckiest Guy', cursive;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    text-align: justify;
+    //font-size: 3vw;
+
+}
+
+#tutorialLine2L{
+    position: absolute;
+    top: 22%;
+    left: 32%;
+    text-align: justify;
+    font-size: 2.6vw;
+
+}
+
+#tutorialLine2R{
+    position: absolute;
+    top: 22%;
+    right: 15%;
+    text-align: justify;
+    font-size: 2.6vw;
+
+}
+
+#t{
+    position: absolute;
+    top:20%;
+    left: 37%;
+    width: 3vw;
+    height: auto;
+}
+
+#wasd{
+    position: absolute;
+    bottom:15%;
+    left: 22%;
+    width: 10vw;
+    height: auto;
+}
+
+#wasdText{
+    position: absolute;
+    bottom:9%;
+    left: 27%;
+    font-size: 1.5vw;
+}
+
+#ctrl{
+    position: absolute;
+    bottom:14.7%;
+    left: 4%;
+    width: 2.5vw;
+    height: auto;
+}
+
+#ctrlText{
+    position: absolute;
+    bottom:9%;
+    left: 5%;
+    font-size: 1.5vw;
+}
+
+#click{
+    position: absolute;
+    bottom:13%;
+    left: 11%;
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+
+#clickText{
+    position: absolute;
+    bottom:9.2%;
+    left: 12%;
+    font-size: 1.4vw;
+}
+
+#shift{
+    position: absolute;
+    bottom:35.8%;
+    left: 3.5%;
+    width: 4vw;
+    height: auto;
+}
+
+#shiftText{
+    position: absolute;
+    bottom:30%;
+    left: 5.5%;
+    font-size: 1.5vw;
+}
+
+#esc{
+    position: absolute;
+    top:9%;
+    left: 3%;
+    width: 4.6vw;
+    height: auto;
+}
+
+#escText{
+    position: absolute;
+    top:15.8%;
+    left: 5.5%;
+    font-size: 1.5vw;
+}
+
+#camera{
+    position: absolute;
+    bottom:15%;
+    right: 27%;
+    width: 3.1vw;
+    height: auto;
+}
+
+#cameraText{
+    position: absolute;
+    bottom:9%;
+    right: 17.5%;
+    font-size: 1.5vw;
+}
+
+#enter{
+    position: absolute;
+    bottom:26%;
+    right: 9%;
+    width: 4.4vw;
+    height: auto;
+}
+
+#enterText1{
+    position: absolute;
+    bottom:20%;
+    right: 3%;
+    font-size: 1.5vw;
+}
+
+#enterText2{
+    position: absolute;
+    bottom:16%;
+    right: -3%;
+    font-size: 1.5vw;
+}
+
+#mouseText1{
+    position: absolute;
+    bottom:16%;
+    left:50%;
+    font-size: 1.9vw;
+}
+
+#mouseText2{
+    position: absolute;
+    bottom:11%;
+    left:50%;
+    font-size: 1.9vw;
+}
+
+/*----------------------------- Click Suggest --------------------------- */
+
+#clickSuggest{
+    position: absolute;
+    text-align: justify;
+    vertical-align: center;
+    font-size: 3vw;
+    bottom: 10%;
+    left: 50%;
+}
