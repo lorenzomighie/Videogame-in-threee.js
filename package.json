@@ -16,7 +16,7 @@
     "cannon": "^0.6.2",
     "lodash": "^4.17.11",
     "node-sass": "^4.12.0",
-    "three": "^0.105.2",
+    "three": "^0.125.0",
     "three-gltf-loader": "^1.105.0"
   },
   "keywords": [],
